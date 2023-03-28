@@ -10,7 +10,7 @@ load_dotenv(dotenv_path)
 MONGODB_URI =os.environ.get("MONGODB_URI")
 DB_NAME=os.environ.get("DB_NAME")
 
-client = MongoClient('mongodb+srv://test:sparta@cluster0.ddrbxs7.mongodb.net/?retryWrites=true&w=majority')
+client = MongoClient(MONGODB_URI)
 db = client.dbsparta
 app = Flask(__name__)
 
