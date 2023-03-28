@@ -1,4 +1,4 @@
-import os                              #
+import os                          
 from os.path import join,  dirname
 from dotenv import load_dotenv
 
@@ -7,8 +7,8 @@ from pymongo import MongoClient
 
 dotenv_path = join(dirname(__file__),'.venv')
 load_dotenv(dotenv_path)
-MONGODB_URL =os.environ.get("mongodb+srv://test:sparta@cluster0.ddrbxs7.mongodb.net/?retryWrites=true&w=majority")
-DB_NAME=os.environ.get("dbsparta")
+MONGODB_URI =os.environ.get("MONGODB_URI")
+DB_NAME=os.environ.get("DB_NAME")
 
 client = MongoClient('mongodb+srv://test:sparta@cluster0.ddrbxs7.mongodb.net/?retryWrites=true&w=majority')
 db = client.dbsparta
